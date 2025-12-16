@@ -6,7 +6,7 @@ export default function Home() {
         <img 
           src="/hero.jpg" 
           alt="Hero background"
-          className="w-full h-full object-cover opacity-90"
+          className="hero-image"
         />
       </div>
 
