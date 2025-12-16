@@ -4,7 +4,7 @@ export default function Home() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/hero.jpg"   // <-- change to your exact file name
+          src="/hero.jpg" 
           alt="Hero background"
           className="w-full h-full object-cover opacity-90"
         />
