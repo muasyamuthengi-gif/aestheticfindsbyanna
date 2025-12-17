@@ -12,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="min-h-screen relative">{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} bg-black text-white`}>
+  {children}
+</body>
     </html>
   );
 }
