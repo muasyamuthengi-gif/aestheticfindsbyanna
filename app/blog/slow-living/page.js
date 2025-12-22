@@ -2,7 +2,7 @@ export default function SlowLivingPost() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif mb-6">
-        Embracing Slow Living at Home
+        Embracing cool bedroom aesthetic
       </h1>
 
       <img
