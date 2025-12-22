@@ -1,32 +1,21 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 
 export default function BlogPage() {
-  const postsDir = path.join(process.cwd(), "posts");
-  const files = fs.readdirSync(postsDir);
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-    return { slug };
-  });
-
   return (
-    <main className="max-w-4xl mx-auto py-20 px-6">
+    <main className="max-w-5xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif mb-10">Blog</h1>
 
-      <ul className="space-y-6">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="text-xl underline"
-            >
-              {post.slug.replace(/-/g, " ")}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="grid md:grid-cols-2 gap-8">
+        <Link
+          href="/blog/post-one"
+          className="border p-6 rounded-xl hover:shadow-lg"
+        >
+          <h2 className="text-2xl font-serif mb-2">
+            First Blog Post
+          </h2>
+          <p>Click to read more.</p>
+        </Link>
+      </div>
     </main>
   );
 }
