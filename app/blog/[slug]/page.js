@@ -12,8 +12,7 @@ export default function BlogPost({ params }) {
       </p>
 
       <p className="text-lg mb-4">
-        You can write anything here manually, add images, text, headings —
-        no markdown, no libraries, no errors.
+        Write your blog manually here. No markdown. No libraries.
       </p>
 
       <img
