@@ -2,7 +2,7 @@ export default function CozyCornersPost() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-serif mb-6">
-        Cozy Corners You’ll Love
+        living room aesthetics You’ll Love
       </h1>
 
       <img
@@ -12,7 +12,7 @@ export default function CozyCornersPost() {
       />
 
       <p className="text-lg text-gray-700 mb-6">
-        Cozy corners transform a house into a home. A chair by the window,
+        Transform a house into a home. A chair by the window,
         a soft throw, and warm lighting can completely change a space.
       </p>
 
