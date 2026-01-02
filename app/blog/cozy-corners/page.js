@@ -1,10 +1,14 @@
+import AffiliateDisclosure from "@/app/components/AffiliateDisclosure";
+
 export default function CozyCornersPost() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
 
-      <h1 className="text-4xl font-serif mb-8">
+      <h1 className="text-4xl font-serif mb-4">
         Cozy Corners You’ll Love
       </h1>
+
+      <AffiliateDisclosure />
 
       <img src="/blog2.jpg" className="w-full rounded-lg mb-8" />
 
