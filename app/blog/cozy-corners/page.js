@@ -1,4 +1,4 @@
-import AffiliateDisclosure from "@/app/components/AffiliateDisclosure.js";
+import AffiliateDisclosure from "@/app/components/AffiliateDisclosure";
 
 export default function CozyCornersPost() {
   return (
