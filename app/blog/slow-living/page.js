@@ -1,46 +1,47 @@
 import AffiliateDisclosure from "@/app/components/AffiliateDisclosure";
 
-export default function CozyCornersPost() {
+export default function SlowLivingPost() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
 
       <h1 className="text-4xl font-serif mb-4">
-        Cozy Corners You’ll Love
+        Embracing Slow Living at Home
       </h1>
 
       <AffiliateDisclosure />
 
-      <img src="/blog2.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog1.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-gray-700 mb-10">
-        Cozy corners turn ordinary spaces into places you want to linger.
-        A quiet chair, soft lighting, and warmth make all the difference.
+        Slow living is about creating calm, intentional spaces that feel warm,
+        grounded, and deeply personal.
       </p>
 
-      <img src="/blog2-2.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog1-2.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-gray-700 mb-10">
-        Neutral colors help create a calm foundation while textures add depth
-        and comfort.
+        Neutral tones, soft textures, and natural light help create a peaceful
+        atmosphere that encourages rest.
       </p>
 
-      <img src="/blog2-3.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog1-3.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-gray-700 mb-10">
-        Less furniture, more intention. Cozy doesn’t mean crowded.
+        Choose pieces that feel meaningful instead of trendy. Less clutter,
+        more intention.
       </p>
 
-      <img src="/blog2-4.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog1-4.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-gray-700 mb-10">
-        Soft lighting instantly changes the mood. Lamps and candles create
-        warmth without effort.
+        Warm wood tones and handmade decor add character and depth to your home.
       </p>
 
-      <img src="/blog2-5.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog1-5.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-gray-700">
-        The best cozy corners feel effortless, personal, and deeply inviting.
+        A slow home isn’t about perfection — it’s about comfort, presence,
+        and enjoying everyday moments.
       </p>
 
     </main>
