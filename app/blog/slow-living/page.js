@@ -1,4 +1,4 @@
-import AffiliateDisclosure from "@/app/components/AffiliateDisclosure";
+import AffiliateDisclosure from "app/components/AffiliateDisclosure";
 
 export default function SlowLivingPost() {
   return (
