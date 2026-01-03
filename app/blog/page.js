@@ -13,7 +13,7 @@ export default function BlogPage() {
           className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
         >
           <img
-            src="/blog1.jpg"
+            src="/blog1a.jpg"
             alt="Slow living"
             className="w-full h-64 object-cover"
           />
