@@ -19,10 +19,12 @@ export default function BlogPage() {
           />
           <div className="p-6">
             <h2 className="text-2xl font-serif mb-2">
-              Embracing Slow Living at Home
+              Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
             </h2>
-            <p className="text-gray-600">
-              How to create calm, intentional spaces that feel warm and personal.
+            <p className="text-black-600">
+              Creating a warm bedroom aesthetic isn’t about buying the most expensive furniture-it’s about creating a space that feels inviting, calm, and deep . 
+
+            A few simple styling choices, like a woven ottoman, wooden accents, indoor plants, and thoughtfully placed art, can instantly elevate the space without overwhelming it. Whether you’re refreshing your bedroom for comfort, relaxation, or simply to create a stylish sanctuary, these warm bedroom aesthetic decor ideas will inspire you to design a room that feels both serene and sophisticated.
             </p>
           </div>
         </a>
