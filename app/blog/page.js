@@ -11,11 +11,12 @@ export default function BlogPage() {
           href="/blog/slow-living"
           className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
         >
-          <div className="bg-neutral-100">
+          {/* Image wrapper keeps card size */}
+          <div className="w-full h-64 bg-[#f5f1ec] flex items-center justify-center">
             <img
               src="/blog1a.jpg"
-              alt="Warm bedroom aesthetic ideas"
-              className="w-full h-auto object-contain"
+              alt="Warm bedroom aesthetic"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
 
@@ -23,14 +24,9 @@ export default function BlogPage() {
             <h2 className="text-2xl font-serif mb-2">
               Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
             </h2>
-
             <p className="text-black">
-              Creating a warm bedroom aesthetic isn’t about buying the most
-              expensive furniture — it’s about creating a space that feels
-              inviting, calm, and deep. A few simple styling choices, like a
-              woven ottoman, wooden accents, indoor plants, and thoughtfully
-              placed art, can instantly elevate the space without overwhelming
-              it.
+              Creating a warm bedroom aesthetic isn’t about buying the most expensive furniture — it’s about creating a space that feels inviting, calm, and lived‑in.
+              Simple styling choices like woven textures, wooden accents, indoor plants, and thoughtfully placed art can instantly elevate the space without overwhelming it.
             </p>
           </div>
         </a>
@@ -40,11 +36,11 @@ export default function BlogPage() {
           href="/blog/cozy-corners"
           className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
         >
-          <div className="bg-neutral-100">
+          <div className="w-full h-64 bg-[#f5f1ec] flex items-center justify-center">
             <img
               src="/blog2.jpg"
               alt="Cozy corners"
-              className="w-full h-auto object-contain"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
 
@@ -52,8 +48,7 @@ export default function BlogPage() {
             <h2 className="text-2xl font-serif mb-2">
               Cozy Corners You’ll Love
             </h2>
-
-            <p className="text-black">
+            <p className="text-gray-600">
               Small styling ideas that make your home feel inviting.
             </p>
           </div>
