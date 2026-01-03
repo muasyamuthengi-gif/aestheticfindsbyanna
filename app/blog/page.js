@@ -15,7 +15,7 @@ export default function BlogPage() {
           <img
             src="/blog1a.jpg"
             alt="Slow living"
-            className="w-full h-64 object-cover"
+            className="w-full h-64 object-contain bg-neutral-100"
           />
           <div className="p-6">
             <h2 className="text-2xl font-serif mb-2">
