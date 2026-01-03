@@ -33,7 +33,7 @@ export default function SlowLivingPost() {
       </p>
 
       {/* 2 */}
-      <img src="/blog2.jpg" className="w-full rounded-lg mb-10" />
+      <img src="/blog1-2.jpg" className="w-full rounded-lg mb-10" />
 
       <h2 className="text-2xl font-serif text-black mb-4">
         2️⃣ Layered Bedding for a Cozy Bedroom
@@ -46,7 +46,7 @@ export default function SlowLivingPost() {
       </p>
 
       {/* 3 */}
-      <img src="/blog3.jpg" className="w-full rounded-lg mb-10" />
+      <img src="/blog1-3.jpg" className="w-full rounded-lg mb-10" />
 
       <h2 className="text-2xl font-serif text-black mb-4">
         3️⃣ Soft, Warm Lighting
@@ -58,9 +58,9 @@ export default function SlowLivingPost() {
         enhances textures and colors, perfect for a relaxing bedroom
         environment.
       </p>
-
+  
       {/* 4 */}
-      <img src="/blog4.jpg" className="w-full rounded-lg mb-10" />
+      <img src="/blog1-4.jpg" className="w-full rounded-lg mb-10" />
 
       <h2 className="text-2xl font-serif text-black mb-4">
         4️⃣ Natural Textures & Materials
@@ -73,7 +73,7 @@ export default function SlowLivingPost() {
       </p>
 
       {/* 5 */}
-      <img src="/blog5.jpg" className="w-full rounded-lg mb-10" />
+      <img src="/blog1-5.jpg" className="w-full rounded-lg mb-10" />
 
       <h2 className="text-2xl font-serif text-black mb-4">
         5️⃣ Cozy Corners & Bedroom Styling Details
