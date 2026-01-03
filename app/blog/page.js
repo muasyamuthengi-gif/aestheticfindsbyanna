@@ -12,10 +12,11 @@ export default function BlogPage() {
           href="/blog/slow-living"
           className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
         >
+            <div className="bg-neutral-100">
           <img
             src="/blog1a.jpg"
             alt="Slow living"
-            className="w-full h-64 object-contain bg-neutral-100"
+            className="w-full aspect-[4/3] object-cover"
           />
           <div className="p-6">
             <h2 className="text-2xl font-serif mb-2">
