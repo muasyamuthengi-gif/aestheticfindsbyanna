@@ -7,29 +7,33 @@ export default function BlogPage() {
 
       <div className="grid md:grid-cols-2 gap-10">
 
-        {/* Blog Post 1 */}
-        <a
-          href="/blog/slow-living"
-          className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
-        >
-            <div className="bg-neutral-100">
-          <img
-            src="/blog1a.jpg"
-            alt="Slow living"
-            className="w-full aspect-[4/3] object-cover"
-          />
-          <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2">
-              Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
-            </h2>
-            <p className="text-black-600">
-              Creating a warm bedroom aesthetic isn’t about buying the most expensive furniture-it’s about creating a space that feels inviting, calm, and deep . 
+       {/* Blog Post 1 */}
+<a
+  href="/blog/slow-living"
+  className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
+>
+  <div className="bg-neutral-100">
+    <img
+      src="/blog1a.jpg"
+      alt="Slow living"
+      className="w-full aspect-[4/3] object-cover"
+    />
+  </div>
 
-            A few simple styling choices, like a woven ottoman, wooden accents, indoor plants, and thoughtfully placed art, can instantly elevate the space without overwhelming it. Whether you’re refreshing your bedroom for comfort, relaxation, or simply to create a stylish sanctuary, these warm bedroom aesthetic decor ideas will inspire you to design a room that feels both serene and sophisticated.
-            </p>
-          </div>
-        </a>
-
+  <div className="p-6">
+    <h2 className="text-2xl font-serif mb-2">
+      Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
+    </h2>
+    <p className="text-black">
+      Creating a warm bedroom aesthetic isn’t about buying the most expensive
+      furniture—it’s about creating a space that feels inviting, calm, and deep.
+      A few simple styling choices, like a woven ottoman, wooden accents, indoor
+      plants, and thoughtfully placed art, can instantly elevate the space
+      without overwhelming it.
+    </p>
+  </div>
+</a
+        
         {/* Blog Post 2 */}
         <a
           href="/blog/cozy-corners"
