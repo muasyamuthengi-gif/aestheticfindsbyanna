@@ -6,7 +6,7 @@ export default function SlowLivingPost() {
 
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-serif mb-4 text-black">
-        Slow Living Bedroom Inspiration
+        Warm Bedroom Aesthetic Ideas
       </h1>
 
       {/* Disclosure */}
