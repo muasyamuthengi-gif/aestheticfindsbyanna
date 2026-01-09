@@ -1,7 +1,7 @@
 export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-serif mb-10 text-center">
+      <h1 className="text-4xl font-serif mb-12 text-center text-black">
         The Blog
       </h1>
 
@@ -9,24 +9,27 @@ export default function BlogPage() {
         {/* Blog Post 1 */}
         <a
           href="/blog/slow-living"
-          className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
+          className="group block border rounded-xl overflow-hidden hover:shadow-lg transition"
         >
-          {/* Image wrapper keeps card size */}
-          <div className="w-full h-64 bg-[#f5f1ec] flex items-center justify-center">
+          {/* Image wrapper */}
+          <div className="w-full h-64 overflow-hidden">
             <img
               src="/blog1a.jpg"
               alt="Warm bedroom aesthetic"
-              className="max-h-full max-w-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
 
+          {/* Text */}
           <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2">
+            <h2 className="text-2xl font-serif mb-3 text-black">
               Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
             </h2>
-            <p className="text-black">
-              Creating a warm bedroom aesthetic isn’t about buying the most expensive furniture — it’s about creating a space that feels inviting, calm, and lived‑in.
-              Simple styling choices like woven textures, wooden accents, indoor plants, and thoughtfully placed art can instantly elevate the space without overwhelming it.
+            <p className="text-black text-base leading-relaxed">
+              Creating a warm bedroom aesthetic isn’t about expensive furniture —
+              it’s about intention. Soft textures, wooden accents, indoor plants,
+              and thoughtful styling choices can transform your bedroom into a
+              calm, cozy, and sophisticated sanctuary.
             </p>
           </div>
         </a>
@@ -34,22 +37,25 @@ export default function BlogPage() {
         {/* Blog Post 2 */}
         <a
           href="/blog/cozy-corners"
-          className="block border rounded-lg overflow-hidden hover:shadow-lg transition"
+          className="group block border rounded-xl overflow-hidden hover:shadow-lg transition"
         >
-          <div className="w-full h-64 bg-[#f5f1ec] flex items-center justify-center">
+          {/* Image wrapper */}
+          <div className="w-full h-64 overflow-hidden">
             <img
               src="/blog2.jpg"
               alt="Cozy corners"
-              className="max-h-full max-w-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
 
+          {/* Text */}
           <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2">
+            <h2 className="text-2xl font-serif mb-3 text-black">
               Cozy Corners You’ll Love
             </h2>
-            <p className="text-gray-600">
-              Small styling ideas that make your home feel inviting.
+            <p className="text-black text-base leading-relaxed">
+              Small styling ideas that turn overlooked spaces into inviting,
+              relaxing corners filled with warmth, comfort, and personality.
             </p>
           </div>
         </a>
