@@ -1,71 +1,50 @@
 export default function BlogPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-serif mb-10 text-center text-black">
-        The Blog
+    <>
+      {/* Breadcrumb */}
+      <p className="text-sm text-gray-400 mb-6">
+        Home / Blog
+      </p>
+
+      {/* Title */}
+      <h1 className="text-5xl md:text-6xl font-serif font-semibold mb-24">
+        Blog
       </h1>
 
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* Blog Post 1 */}
-        <a
-          href="/blog/slow-living"
-          className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
-        >
-          {/* Image wrapper locks size */}
-          <div className="h-64 w-full overflow-hidden">
-            <img
-              src="/blog1a.jpg"
-              alt="Slow living"
-              className="
-                h-full w-full
-                object-cover
-                transition-transform duration-500 ease-out
-                group-hover:scale-105
-              "
-            />
-          </div>
-
-          <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2 text-black">
-              Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
-            </h2>
-            <p className="text-black">
-              Creating a warm bedroom aesthetic isn’t about buying expensive
-              furniture—it’s about thoughtful styling that feels calm, inviting,
-              and deeply personal.
-            </p>
-          </div>
+      {/* Cards */}
+      <div className="grid md:grid-cols-2 gap-20">
+        {/* Card 1 */}
+        <a href="/blog/slow-living" className="block">
+          <img
+            src="/blog1a.jpg"
+            className="w-full h-[420px] object-cover mb-6"
+            alt=""
+          />
+          <h2 className="text-2xl font-serif mb-3">
+            Warm Bedroom Aesthetic Decor Ideas
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Creating a warm bedroom aesthetic isn’t about expensive furniture,
+            but thoughtful, calming choices that feel inviting and intentional.
+          </p>
         </a>
 
-        {/* Blog Post 2 */}
-        <a
-          href="/blog/cozy-corners"
-          className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
-        >
-          <div className="h-64 w-full overflow-hidden">
-            <img
-              src="/blog2.jpg"
-              alt="Cozy corners"
-              className="
-                h-full w-full
-                object-cover
-                transition-transform duration-500 ease-out
-                group-hover:scale-105
-              "
-            />
-          </div>
-
-          <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2 text-black">
-              Cozy Corners You’ll Love
-            </h2>
-            <p className="text-black">
-              Small styling ideas that make your home feel warm, inviting, and
-              beautifully intentional.
-            </p>
-          </div>
+        {/* Card 2 */}
+        <a href="/blog/cozy-corners" className="block">
+          <img
+            src="/blog2.jpg"
+            className="w-full h-[420px] object-cover mb-6"
+            alt=""
+          />
+          <h2 className="text-2xl font-serif mb-3">
+            Cozy Corners You’ll Love
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Small styling ideas that transform everyday spaces into warm,
+            inviting corners.
+          </p>
         </a>
       </div>
-    </main>
+    </>
   );
 }
