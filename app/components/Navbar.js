@@ -35,7 +35,7 @@ export default function Navbar() {
         </Link>
 
         {/* Links */}
-        <div className="flex gap-10 text-[15px] font-normal tracking-wide items-center">
+        <div className="flex gap-10 text-[15px] font-semibold tracking-wide items-center">
           
           <Link href="/" className={linkClass("/")}>
             Home
