@@ -1,28 +1,22 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import { Playfair_Display, Inter } from "next/font/google";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+import Navbar from "../components/Navbar";
 
 export const metadata = {
   title: "Aesthetic Finds",
-  description: "Warm luxury, minimal living",
+  description: "Bedroom decor, cozy corners & aesthetic inspiration",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="pt-24">
+    <html lang="en">
+      <body className="antialiased">
+        {/* Fixed Navbar */}
         <Navbar />
-        {children}
+
+        {/* Page Content pushed below navbar */}
+        <main className="pt-24">
+          {children}
+        </main>
       </body>
     </html>
   );
