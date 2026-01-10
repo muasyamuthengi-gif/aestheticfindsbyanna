@@ -1,31 +1,14 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [blogOpen, setBlogOpen] = useState(false);
-  const dropdownRef = useRef(null);
   const pathname = usePathname();
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setBlogOpen(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const isActive = (path) => pathname === path;
-  const isBlogActive = pathname.startsWith("/blog");
+  const isActive = (path) =>
+    pathname === path ? "text-blue-600" : "hover:text-gray-600";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b overflow-visible">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
@@ -34,64 +17,22 @@ export default function Navbar() {
         </Link>
 
         {/* Links */}
-        <div className="flex gap-8 text-sm font-medium items-center">
-          
-          {/* Home */}
-          <Link
-            href="/"
-            className={`hover:text-blue-600 ${
-              isActive("/") ? "text-blue-600" : "text-black"
-            }`}
-          >
+        <div className="flex gap-8 text-sm font-medium">
+          <Link href="/" className={isActive("/")}>
             Home
           </Link>
 
-          {/* Blog Dropdown */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setBlogOpen(!blogOpen)}
-              className={`hover:text-blue-600 flex items-center gap-1 ${
-                isBlogActive ? "text-blue-600" : "text-black"
-              }`}
-            >
-              Blog
-              <span
-                className={`text-xs transition-transform duration-200 ${
-                  blogOpen ? "rotate-180" : ""
-                }`}
-              >
-                ▾
-              </span>
-            </button>
+          <Link href="/blog" className={isActive("/blog")}>
+            Blog
+          </Link>
 
-            {blogOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg">
-                <Link
-                  href="/blog/slow-living"
-                  className={`block px-4 py-3 hover:bg-gray-100 ${
-                    pathname === "/blog/slow-living"
-                      ? "text-blue-600 font-medium"
-                      : "text-black"
-                  }`}
-                  onClick={() => setBlogOpen(false)}
-                >
-                  Bedroom Decor
-                </Link>
+          <Link href="/about-us" className={isActive("/about-us")}>
+            About Us
+          </Link>
 
-                <Link
-                  href="/blog/cozy-corners"
-                  className={`block px-4 py-3 hover:bg-gray-100 ${
-                    pathname === "/blog/cozy-corners"
-                      ? "text-blue-600 font-medium"
-                      : "text-black"
-                  }`}
-                  onClick={() => setBlogOpen(false)}
-                >
-                  Cozy Corners
-                </Link>
-              </div>
-            )}
-          </div>
+          <Link href="/contact-us" className={isActive("/contact-us")}>
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>
