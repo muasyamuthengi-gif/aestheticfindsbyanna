@@ -14,7 +14,7 @@ export default function BlogPage() {
       {/* Cards */}
       <div className="grid md:grid-cols-2 gap-20">
         {/* Card 1 */}
-        <a href="/blog/bedroom-decor" className="block">
+        <a href="/blog/slow-living" className="block">
           <img
             src="/blog1a.jpg"
             className="w-full h-[420px] object-cover mb-6"
