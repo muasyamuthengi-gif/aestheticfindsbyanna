@@ -26,8 +26,8 @@ export default function Navbar() {
       : "hover:text-gray-600";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
         
         {/* Logo */}
         <Link href="/" className="text-xl font-serif">
