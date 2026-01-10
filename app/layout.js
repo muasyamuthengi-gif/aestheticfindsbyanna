@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className="pt-24">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
