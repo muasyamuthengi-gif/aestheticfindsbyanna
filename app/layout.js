@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="pt-20">
+      <body className="pt-24">
         <Navbar />
         {children}
       </body>
