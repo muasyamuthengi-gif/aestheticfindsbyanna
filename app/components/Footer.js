@@ -2,25 +2,25 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f6f3ee] text-sm text-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-[#f6f3ee] text-gray-800">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
         
         {/* Brand */}
         <div>
           <h2 className="text-lg font-semibold mb-4">
             Aesthetic Finds
           </h2>
-          <p className="leading-relaxed text-gray-600">
-            Smart ideas for a beautiful home & garden.
-            We share easy décor inspiration and beginner‑friendly tips
-            to help you create a cozy, stylish lifestyle.
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Warm luxury, minimal living.  
+            Discover cozy bedroom decor ideas, calm interiors,
+            and simple styling inspiration for everyday spaces.
           </p>
         </div>
 
         {/* Ideas */}
         <div>
           <h3 className="font-semibold mb-4">Ideas</h3>
-          <ul className="space-y-2 text-gray-600">
+          <ul className="space-y-2 text-sm text-gray-600">
             <li>
               <Link href="/about-us" className="hover:text-black">
                 Our Story
@@ -37,16 +37,15 @@ export default function Footer() {
         {/* Blog */}
         <div>
           <h3 className="font-semibold mb-4">Blog</h3>
-          <ul className="space-y-2 text-gray-600">
-            <li><Link href="/" className="hover:text-black">Home</Link></li>
-            <li><Link href="/blog" className="hover:text-black">Blog</Link></li>
+          <ul className="space-y-2 text-sm text-gray-600">
             <li>
-              <Link href="/blog/living-room-decor" className="hover:text-black">
-                Living Room Decor
-              </Link>
+              <Link href="/" className="hover:text-black">Home</Link>
             </li>
             <li>
-              <Link href="/blog/bedroom-decor" className="hover:text-black">
+              <Link href="/blog" className="hover:text-black">Blog</Link>
+            </li>
+            <li>
+              <Link href="/blog/slow-living" className="hover:text-black">
                 Bedroom Decor
               </Link>
             </li>
@@ -63,10 +62,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Links */}
+        {/* Legal */}
         <div>
           <h3 className="font-semibold mb-4">Links</h3>
-          <ul className="space-y-2 text-gray-600">
+          <ul className="space-y-2 text-sm text-gray-600">
             <li>
               <Link href="/terms-of-service" className="hover:text-black">
                 Terms of service
@@ -89,7 +88,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-gray-200 py-6 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Aesthetic Finds
+        © {new Date().getFullYear()} Aesthetic Finds. All rights reserved.
       </div>
     </footer>
   );
