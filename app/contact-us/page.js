@@ -1,33 +1,37 @@
-export default function AboutUs() {
+export default function ContactUs() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-24">
       <h1 className="text-4xl md:text-5xl font-serif mb-6 text-black">
-        About Us
+        Contact Us
       </h1>
 
-      <p className="text-lg text-black mb-6">
-        Welcome to <strong>Aesthetic Finds</strong> — a space dedicated to
-        timeless bedroom decor, cozy interiors, and thoughtful home styling
-        ideas.
+      <p className="text-lg text-black mb-8">
+        Have a question, collaboration idea, or feedback? We’d love to hear
+        from you.
       </p>
 
-      <p className="text-lg text-black mb-6">
-        We believe your bedroom should feel calm, warm, and personal. Our goal
-        is to inspire beautiful spaces through carefully curated decor ideas,
-        styling tips, and cozy design inspiration.
-      </p>
+      <div className="space-y-4 text-lg text-black">
+        <p>
+          📧 Email:{" "}
+          <a
+            href="mailto:hello@aestheticfinds.com"
+            className="text-blue-600 hover:underline"
+          >
+            hello@aestheticfinds.com
+          </a>
+        </p>
 
-      <p className="text-lg text-black mb-6">
-        Some of the links on this site are affiliate links, which means we may
-        earn a small commission at no extra cost to you. This helps support the
-        creation of helpful, inspiring content.
-      </p>
+        <p>
+          📌 Pinterest:{" "}
+          <span className="text-gray-700">
+            @aestheticfinds
+          </span>
+        </p>
+      </div>
 
-      <p className="text-lg text-black">
-        Thank you for being here and taking part in creating a more beautiful,
-        intentional home.
+      <p className="text-sm text-gray-500 mt-10">
+        We usually respond within 24–48 hours.
       </p>
     </main>
   );
 }
-
