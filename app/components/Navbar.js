@@ -25,7 +25,7 @@ export default function Navbar() {
   const isBlogActive = pathname.startsWith("/blog");
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b overflow-visible">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
