@@ -1,12 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Footer() {
-  const [openBedroom, setOpenBedroom] = useState(false);
-  const [openCozy, setOpenCozy] = useState(false);
-
   return (
     <footer className="bg-[#f6f3ee] text-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
@@ -18,7 +12,8 @@ export default function Footer() {
           </h2>
           <p className="text-sm text-gray-600 leading-relaxed">
             Warm luxury, minimal living.  
-            Discover cozy decor ideas and calm interiors.
+            Discover cozy decor ideas, calm interiors,
+            and simple styling inspiration.
           </p>
         </div>
 
@@ -28,84 +23,49 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-600">
             <li>
               <Link href="/about-us" className="hover:text-black">
-                Our Story
+                About us
               </Link>
             </li>
             <li>
               <Link href="/contact-us" className="hover:text-black">
-                Contact Us
+                Contact us
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Blog with dropdowns */}
+        {/* Blog (same dropdown style as Navbar) */}
         <div>
           <h3 className="font-semibold mb-4">Blog</h3>
 
-          <ul className="space-y-3 text-sm text-gray-600">
+          <div className="relative group text-sm text-gray-600">
+            <span className="cursor-pointer hover:text-black flex items-center gap-1">
+              Blog
+              <span className="text-xs">▾</span>
+            </span>
 
-            <li>
-              <Link href="/blog" className="hover:text-black">
-                Blog Home
-              </Link>
-            </li>
-
-            {/* Bedroom Decor */}
-            <li>
-              <button
-                onClick={() => setOpenBedroom(!openBedroom)}
-                className="flex items-center justify-between w-full hover:text-black"
-              >
-                Bedroom Decor
-                <span
-                  className={`transition-transform ${
-                    openBedroom ? "rotate-90" : ""
-                  }`}
-                >
-                  ▶
-                </span>
-              </button>
-
-              {openBedroom && (
-                <ul className="ml-4 mt-2 space-y-2 text-gray-500">
-                  <li>
-                    <Link href="/blog/slow-living" className="hover:text-black">
-                      Cozy Bedrooms
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* Cozy Living */}
-            <li>
-              <button
-                onClick={() => setOpenCozy(!openCozy)}
-                className="flex items-center justify-between w-full hover:text-black"
-              >
-                Cozy Living
-                <span
-                  className={`transition-transform ${
-                    openCozy ? "rotate-90" : ""
-                  }`}
-                >
-                  ▶
-                </span>
-              </button>
-
-              {openCozy && (
-                <ul className="ml-4 mt-2 space-y-2 text-gray-500">
-                  <li>
-                    <Link href="/blog/cozy-corners" className="hover:text-black">
-                      Cozy Corners
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-          </ul>
+            {/* Dropdown */}
+            <div className="absolute left-0 mt-2 hidden group-hover:block bg-white border shadow-md rounded-md w-44">
+              <ul className="py-2">
+                <li>
+                  <Link
+                    href="/blog/slow-living"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Bedroom Decor
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog/cozy-corners"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Cozy Living
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Legal */}
@@ -132,6 +92,7 @@ export default function Footer() {
 
       </div>
 
+      {/* Bottom bar */}
       <div className="border-t border-gray-200 py-6 text-center text-xs text-gray-500">
         © {new Date().getFullYear()} Aesthetic Finds. All rights reserved.
       </div>
