@@ -22,9 +22,7 @@ export default function Navbar() {
   }, []);
 
   const isActive = (path) => pathname === path;
-
-  const isBlogActive =
-    pathname.startsWith("/blog");
+  const isBlogActive = pathname.startsWith("/blog");
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b">
@@ -37,11 +35,12 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="flex gap-8 text-sm font-medium items-center">
+          
           {/* Home */}
           <Link
             href="/"
-            className={`hover:text-gray-600 ${
-              isActive("/") ? "text-black border-b border-black" : ""
+            className={`hover:text-blue-600 ${
+              isActive("/") ? "text-blue-600" : "text-black"
             }`}
           >
             Home
@@ -51,8 +50,8 @@ export default function Navbar() {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setBlogOpen(!blogOpen)}
-              className={`hover:text-gray-600 flex items-center gap-1 ${
-                isBlogActive ? "text-black border-b border-black" : ""
+              className={`hover:text-blue-600 flex items-center gap-1 ${
+                isBlogActive ? "text-blue-600" : "text-black"
               }`}
             >
               Blog
@@ -70,7 +69,9 @@ export default function Navbar() {
                 <Link
                   href="/blog/slow-living"
                   className={`block px-4 py-3 hover:bg-gray-100 ${
-                    pathname === "/blog/slow-living" ? "font-semibold" : ""
+                    pathname === "/blog/slow-living"
+                      ? "text-blue-600 font-medium"
+                      : "text-black"
                   }`}
                   onClick={() => setBlogOpen(false)}
                 >
@@ -80,7 +81,9 @@ export default function Navbar() {
                 <Link
                   href="/blog/cozy-corners"
                   className={`block px-4 py-3 hover:bg-gray-100 ${
-                    pathname === "/blog/cozy-corners" ? "font-semibold" : ""
+                    pathname === "/blog/cozy-corners"
+                      ? "text-blue-600 font-medium"
+                      : "text-black"
                   }`}
                   onClick={() => setBlogOpen(false)}
                 >
