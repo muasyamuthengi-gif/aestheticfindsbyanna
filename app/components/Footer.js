@@ -1,6 +1,23 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
 
 export default function Footer() {
+  const [blogOpen, setBlogOpen] = useState(false);
+  const blogRef = useRef(null);
+
+  // close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (blogRef.current && !blogRef.current.contains(e.target)) {
+        setBlogOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <footer className="bg-[#f6f3ee] text-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
@@ -12,8 +29,8 @@ export default function Footer() {
           </h2>
           <p className="text-sm text-gray-600 leading-relaxed">
             Warm luxury, minimal living.  
-            Discover cozy decor ideas, calm interiors,
-            and simple styling inspiration.
+            Discover cozy bedroom decor ideas, calm interiors,
+            and simple styling inspiration for everyday spaces.
           </p>
         </div>
 
@@ -23,49 +40,85 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-gray-600">
             <li>
               <Link href="/about-us" className="hover:text-black">
-                About us
+                Our Story
               </Link>
             </li>
             <li>
               <Link href="/contact-us" className="hover:text-black">
-                Contact us
+                Contact Us
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Blog (same dropdown style as Navbar) */}
-        <div>
+        {/* Blog */}
+        <div ref={blogRef}>
           <h3 className="font-semibold mb-4">Blog</h3>
+          <ul className="space-y-2 text-sm text-gray-600">
 
-          <div className="relative group text-sm text-gray-600">
-            <span className="cursor-pointer hover:text-black flex items-center gap-1">
-              Blog
-              <span className="text-xs">▾</span>
-            </span>
+            <li>
+              <Link href="/" className="hover:text-black">
+                Home
+              </Link>
+            </li>
 
-            {/* Dropdown */}
-            <div className="absolute left-0 mt-2 hidden group-hover:block bg-white border shadow-md rounded-md w-44">
-              <ul className="py-2">
-                <li>
-                  <Link
-                    href="/blog/slow-living"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Bedroom Decor
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog/cozy-corners"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Cozy Living
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <li>
+              <Link href="/blog" className="hover:text-black">
+                Blog
+              </Link>
+            </li>
+
+            {/* Dropdown trigger */}
+            <li>
+              <button
+                onClick={() => setBlogOpen(!blogOpen)}
+                className="flex items-center gap-1 hover:text-black transition"
+              >
+                Categories
+                <span
+                  className={`transition-transform ${
+                    blogOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  ▾
+                </span>
+              </button>
+
+              {blogOpen && (
+                <ul className="mt-2 ml-3 space-y-2 text-sm text-gray-600">
+                  <li>
+                    <Link
+                      href="/blog/slow-living"
+                      className="hover:text-black"
+                    >
+                      Bedroom Decor
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blog/cozy-corners"
+                      className="hover:text-black"
+                    >
+                      Cozy Corners
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            <li>
+              <Link href="/about-us" className="hover:text-black">
+                About us
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/contact-us" className="hover:text-black">
+                Contact us
+              </Link>
+            </li>
+
+          </ul>
         </div>
 
         {/* Legal */}
@@ -89,7 +142,6 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
       </div>
 
       {/* Bottom bar */}
