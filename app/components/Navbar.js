@@ -1,10 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [blogOpen, setBlogOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const pathname = usePathname();
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setBlogOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const isActive = (path) => pathname === path;
+
+  const isBlogActive =
+    pathname.startsWith("/blog");
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b">
@@ -17,32 +37,51 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="flex gap-8 text-sm font-medium items-center">
-          <Link href="/" className="hover:text-gray-600">
+          {/* Home */}
+          <Link
+            href="/"
+            className={`hover:text-gray-600 ${
+              isActive("/") ? "text-black border-b border-black" : ""
+            }`}
+          >
             Home
           </Link>
 
           {/* Blog Dropdown */}
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setBlogOpen(!blogOpen)}
-              className="hover:text-gray-600 flex items-center gap-1"
+              className={`hover:text-gray-600 flex items-center gap-1 ${
+                isBlogActive ? "text-black border-b border-black" : ""
+              }`}
             >
               Blog
-              <span className="text-xs">▾</span>
+              <span
+                className={`text-xs transition-transform duration-200 ${
+                  blogOpen ? "rotate-180" : ""
+                }`}
+              >
+                ▾
+              </span>
             </button>
 
             {blogOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg">
                 <Link
                   href="/blog/slow-living"
-                  className="block px-4 py-3 hover:bg-gray-100"
+                  className={`block px-4 py-3 hover:bg-gray-100 ${
+                    pathname === "/blog/slow-living" ? "font-semibold" : ""
+                  }`}
                   onClick={() => setBlogOpen(false)}
                 >
                   Bedroom Decor
                 </Link>
+
                 <Link
                   href="/blog/cozy-corners"
-                  className="block px-4 py-3 hover:bg-gray-100"
+                  className={`block px-4 py-3 hover:bg-gray-100 ${
+                    pathname === "/blog/cozy-corners" ? "font-semibold" : ""
+                  }`}
                   onClick={() => setBlogOpen(false)}
                 >
                   Cozy Corners
