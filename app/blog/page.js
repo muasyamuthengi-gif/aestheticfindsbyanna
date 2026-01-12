@@ -8,7 +8,7 @@ export default function BlogPage() {
       <div className="grid md:grid-cols-2 gap-10">
         {/* Blog Post 1 */}
         <a
-          href="/blog/slow-living"
+          href="/blog/bedroom-decor"
           className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
         >
           {/* Image wrapper locks size */}
