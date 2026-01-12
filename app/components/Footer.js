@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
@@ -37,7 +36,7 @@ export default function Footer() {
         {/* Ideas */}
         <div>
           <h3 className="font-semibold mb-4">Ideas</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
+          <ul className="space-y-2 text-sm font-medium text-gray-600">
             <li>
               <Link href="/about-us" className="hover:text-black">
                 Our Story
@@ -51,30 +50,18 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Blog */}
+        {/* Blog (dropdown from Blog itself) */}
         <div ref={blogRef}>
           <h3 className="font-semibold mb-4">Blog</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
+          <ul className="space-y-2 text-sm font-medium text-gray-600">
 
-            <li>
-              <Link href="/" className="hover:text-black">
-                Home
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/blog" className="hover:text-black">
-                Blog
-              </Link>
-            </li>
-
-            {/* Dropdown trigger */}
+            {/* Blog trigger */}
             <li>
               <button
                 onClick={() => setBlogOpen(!blogOpen)}
                 className="flex items-center gap-1 hover:text-black transition"
               >
-                Categories
+                Blog
                 <span
                   className={`transition-transform ${
                     blogOpen ? "rotate-180" : ""
@@ -85,10 +72,10 @@ export default function Footer() {
               </button>
 
               {blogOpen && (
-                <ul className="mt-2 ml-3 space-y-2 text-sm text-gray-600">
+                <ul className="mt-2 ml-3 space-y-2">
                   <li>
                     <Link
-                      href="/blog/bedroom-decor"
+                      href="/blog/slow-living"
                       className="hover:text-black"
                     >
                       Bedroom Decor
@@ -111,20 +98,18 @@ export default function Footer() {
                 About us
               </Link>
             </li>
-
             <li>
               <Link href="/contact-us" className="hover:text-black">
                 Contact us
               </Link>
             </li>
-
           </ul>
         </div>
 
         {/* Legal */}
         <div>
           <h3 className="font-semibold mb-4">Links</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
+          <ul className="space-y-2 text-sm font-medium text-gray-600">
             <li>
               <Link href="/terms-of-service" className="hover:text-black">
                 Terms of service
