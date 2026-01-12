@@ -10,7 +10,7 @@ export default function CozyCornersPost() {
 
       <AffiliateDisclosure />
 
-      <img src="/blog2.jpg" className="w-full rounded-lg mb-8" />
+      <img src="/blog2a.jpg" className="w-full rounded-lg mb-8" />
 
       <p className="text-lg text-black-700 mb-10">
         Cozy corners turn ordinary spaces into places you want to linger.
