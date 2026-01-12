@@ -88,7 +88,7 @@ export default function Footer() {
                 <ul className="mt-2 ml-3 space-y-2 text-sm text-gray-600">
                   <li>
                     <Link
-                      href="/blog/slow-living"
+                      href="/blog/bedroom-decor"
                       className="hover:text-black"
                     >
                       Bedroom Decor
