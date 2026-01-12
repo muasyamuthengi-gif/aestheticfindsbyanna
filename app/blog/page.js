@@ -44,7 +44,7 @@ export default function BlogPage() {
         >
           <div className="h-64 w-full overflow-hidden">
             <img
-              src="/blog2.jpg"
+              src="/blog2a.jpg"
               alt="Cozy corners"
               className="
                 h-full w-full
