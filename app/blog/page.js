@@ -57,11 +57,10 @@ export default function BlogPage() {
 
           <div className="p-6">
             <h2 className="text-2xl font-serif mb-2 text-black">
-              Cozy Corners You’ll Love
+              Cozy Corner Ideas to Create Warm, Inviting Spaces at Home
             </h2>
             <p className="text-black">
-              Small styling ideas that make your home feel warm, inviting, and
-              beautifully intentional.
+              Soft seating instantly makes a space feel relaxed and welcoming. A beanbag or cushioned chair encourages comfort while keeping the corner casual and inviting.
             </p>
           </div>
         </a>
