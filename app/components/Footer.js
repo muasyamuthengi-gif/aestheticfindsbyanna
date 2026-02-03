@@ -73,14 +73,16 @@ export default function Footer() {
 
               {blogOpen && (
                 <ul className="mt-2 ml-3 space-y-2">
+
                   <li>
                     <Link
-                      href="/blog/slow-living"
+                      href="/blog/bedroom-decor"
                       className="hover:text-black"
                     >
                       Bedroom Decor
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       href="/blog/cozy-corners"
@@ -89,6 +91,16 @@ export default function Footer() {
                       Cozy Corners
                     </Link>
                   </li>
+
+                  <li>
+                    <Link
+                      href="/blog/indoor-plants"
+                      className="hover:text-black"
+                    >
+                      Indoor Plants
+                    </Link>
+                  </li>
+
                 </ul>
               )}
             </li>
@@ -98,11 +110,13 @@ export default function Footer() {
                 About us
               </Link>
             </li>
+
             <li>
               <Link href="/contact-us" className="hover:text-black">
                 Contact us
               </Link>
             </li>
+
           </ul>
         </div>
 
@@ -127,6 +141,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+
       </div>
 
       {/* Bottom bar */}
