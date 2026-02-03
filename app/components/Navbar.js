@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
@@ -21,14 +20,12 @@ export default function Navbar() {
   }, []);
 
   const linkClass = (path) =>
-    pathname === path
-      ? "text-blue-600"
-      : "hover:text-gray-600";
+    pathname === path ? "text-blue-600" : "hover:text-gray-600";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b">
       <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-        
+
         {/* Logo */}
         <Link href="/" className="text-2xl font-serif font-bold">
           Aesthetic Finds
@@ -36,7 +33,7 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="flex gap-10 text-[15px] font-semibold tracking-wide items-center">
-          
+
           <Link href="/" className={linkClass("/")}>
             Home
           </Link>
@@ -63,6 +60,7 @@ export default function Navbar() {
 
             {open && (
               <div className="absolute right-0 mt-3 w-48 bg-white border rounded-lg shadow-md">
+
                 <Link
                   href="/blog/bedroom-decor"
                   className="block px-4 py-2 hover:bg-gray-100"
@@ -70,6 +68,7 @@ export default function Navbar() {
                 >
                   Bedroom Decor
                 </Link>
+
                 <Link
                   href="/blog/cozy-corners"
                   className="block px-4 py-2 hover:bg-gray-100"
@@ -77,6 +76,15 @@ export default function Navbar() {
                 >
                   Cozy Corners
                 </Link>
+
+                <Link
+                  href="/blog/indoor-plants"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={() => setOpen(false)}
+                >
+                  Indoor Plants
+                </Link>
+
               </div>
             )}
           </div>
@@ -88,6 +96,7 @@ export default function Navbar() {
           <Link href="/contact-us" className={linkClass("/contact-us")}>
             Contact Us
           </Link>
+
         </div>
       </div>
     </nav>
