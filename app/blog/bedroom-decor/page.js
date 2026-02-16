@@ -32,28 +32,29 @@ export default function BedroomDecorPage() {
           </div>
         </a>
 
-        {/* Post 2 - Placeholder */}
-        <a
-          href="/blog/bedroom-decor/post-two"
-          className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
-        >
-          <div className="h-64 w-full overflow-hidden">
-            <img
-              src="/placeholder.jpg"
-              alt="Bedroom decor idea"
-              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-          </div>
+  {/* Post 2 */}
+<a
+  href="/blog/bedroom-decor/bedroom-paint-colors"
+  className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
+>
+  <div className="h-64 w-full overflow-hidden">
+    <img
+      src="/bed.post2.jpg"
+      alt="Bedroom Paint Colors"
+      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+    />
+  </div>
 
-          <div className="p-6">
-            <h2 className="text-2xl font-serif mb-2 text-black">
-              Coming Soon
-            </h2>
-            <p className="text-black">
-              More bedroom decor inspiration is on the way.
-            </p>
-          </div>
-        </a>
+  <div className="p-6">
+    <h2 className="text-2xl font-serif mb-2 text-black">
+      Bedroom Paint Colors That Set the Mood & Transform Your Space
+    </h2>
+    <p className="text-black">
+      Your bedroom color does more than look pretty - it sets the emotional tone 
+      of the space. Discover timeless paint shades that create calm, luxury, and warmth.
+    </p>
+  </div>
+</a>
 
       </div>
     </main>
