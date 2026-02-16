@@ -1,14 +1,13 @@
 export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-20">
-
       <h1 className="text-4xl font-serif mb-10 text-center text-black">
         The Blog
       </h1>
 
       <div className="grid md:grid-cols-2 gap-10">
 
-        {/* Blog Post 1 */}
+        {/* Bedroom Decor Category */}
         <a
           href="/blog/bedroom-decor"
           className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
@@ -16,24 +15,24 @@ export default function BlogPage() {
           <div className="h-64 w-full overflow-hidden">
             <img
               src="/blog1a.jpg"
-              alt="Warm bedroom decor"
+              alt="Bedroom decor ideas"
               className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </div>
 
           <div className="p-6">
             <h2 className="text-2xl font-serif mb-2 text-black">
-              Warm Bedroom Aesthetic Decor Ideas That Feel Cozy & Luxurious
+              Bedroom Decor Ideas
             </h2>
             <p className="text-black">
-              Creating a warm bedroom aesthetic isn’t about buying expensive
-              furniture—it’s about thoughtful styling that feels calm, inviting,
-              and deeply personal.
+              Explore cozy, warm, and luxury-inspired bedroom styling ideas.
+              Discover layered bedding, soft lighting, natural textures,
+              and curated details that transform your space.
             </p>
           </div>
         </a>
 
-        {/* Blog Post 2 */}
+        {/* Cozy Corners */}
         <a
           href="/blog/cozy-corners"
           className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
@@ -51,14 +50,14 @@ export default function BlogPage() {
               Cozy Corner Ideas to Create Warm, Inviting Spaces at Home
             </h2>
             <p className="text-black">
-              Soft seating instantly makes a space feel relaxed and welcoming. A
-              beanbag or cushioned chair encourages comfort while keeping the
-              corner casual and inviting.
+              Soft seating instantly makes a space feel relaxed and welcoming.
+              A beanbag or cushioned chair encourages comfort while keeping
+              the corner casual and inviting.
             </p>
           </div>
         </a>
 
-        {/* Blog Post 3 */}
+        {/* Indoor Plants */}
         <a
           href="/blog/indoor-plants"
           className="group block border rounded-lg overflow-hidden transition-shadow hover:shadow-xl"
@@ -76,10 +75,8 @@ export default function BlogPage() {
               6 Stunning Indoor Plants That Instantly Elevate Your Home Decor
             </h2>
             <p className="text-black">
-              Indoor plants aren’t just trendy - they’re one of the easiest ways
-              to make a space feel alive, intentional, and high-end. Whether you
-              live in a small apartment or a spacious home, the right plant can
-              act as decor, mood-setter, and focal point all at once.
+              Indoor plants aren’t just trendy — they’re one of the easiest
+              ways to make a space feel alive, intentional, and high-end.
             </p>
           </div>
         </a>
