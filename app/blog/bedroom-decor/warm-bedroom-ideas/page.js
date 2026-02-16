@@ -1,4 +1,4 @@
-import AffiliateDisclosure from "../../components/AffiliateDisclosure";
+import AffiliateDisclosure from "../../../components/AffiliateDisclosure";
 
 export default function WarmBedroomIdeas() {
   return (
